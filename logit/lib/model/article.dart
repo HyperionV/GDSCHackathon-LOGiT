@@ -46,7 +46,7 @@ Future<List<Article>> fetchArticlesData() async {
 
     return articles;
   } else {
-    throw Exception('User data not found');
+    throw Exception('Không tìm thấy dữ liệu người dùng');
   }
 }
 

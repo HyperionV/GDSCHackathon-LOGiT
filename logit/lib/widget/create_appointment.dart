@@ -80,7 +80,7 @@ class _CreateAppointmentState extends State<CreateAppointment> {
     return AlertDialog(
       title: Center(
         child: Text(
-          booked ? 'Appointment requested' : 'Book an appointment',
+          booked ? 'Đã yêu cầu đặt lịch' : 'Đặt lịch khám',
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w500,
@@ -100,7 +100,7 @@ class _CreateAppointmentState extends State<CreateAppointment> {
                   ),
                   const SizedBox(height: 20),
                   Text(
-                    'You will be notified when the doctor confirm.',
+                    'Bạn sẽ được thông báo khi bác sĩ xác nhận.',
                     textAlign: TextAlign.center,
                   ),
                 ],
@@ -124,7 +124,7 @@ class _CreateAppointmentState extends State<CreateAppointment> {
                               children: [
                                 Icon(Icons.calendar_today),
                                 const SizedBox(width: 8.0),
-                                Text('Date:', style: TextStyle(fontSize: 16.0)),
+                                Text('Ngày:', style: TextStyle(fontSize: 16.0)),
                                 const Spacer(),
                                 TextButton(
                                   onPressed: () => _selectDate(context),
@@ -140,7 +140,7 @@ class _CreateAppointmentState extends State<CreateAppointment> {
                                 Icon(Icons.access_time),
                                 const SizedBox(width: 8.0),
                                 Text(
-                                  'At: ',
+                                  'Lúc: ',
                                   style: TextStyle(fontSize: 16.0),
                                 ),
                                 const Spacer(),
@@ -186,7 +186,7 @@ class _CreateAppointmentState extends State<CreateAppointment> {
                           booked = true;
                         });
                       },
-                      child: Text('Book'),
+                      child: Text('Đặt lịch'),
                     ),
                   ],
                 ),

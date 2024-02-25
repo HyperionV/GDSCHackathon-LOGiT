@@ -22,7 +22,7 @@ class _TreatmentListState extends State<TreatmentList> {
   Widget build(BuildContext context) {
     if (widget.treatmentList.isEmpty) {
       return const Center(
-        child: Text('No recorded treatments.',
+        child: Text('Không có liệu trình nào được ghi.',
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400)),
       );
     }

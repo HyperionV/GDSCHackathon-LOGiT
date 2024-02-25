@@ -62,7 +62,7 @@ class _NewMessageState extends State<NewMessage> {
               textCapitalization: TextCapitalization.sentences,
               autocorrect: true,
               enableSuggestions: true,
-              decoration: const InputDecoration(labelText: 'Send a message...'),
+              decoration: const InputDecoration(labelText: 'Gửi một tin nhắn...'),
             ),
           ),
           IconButton(
@@ -119,7 +119,7 @@ class _MessageScreenDoctorState extends State<MessageScreenDoctor> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Messages'),
+        title: const Text('Tin nhắn'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -133,7 +133,7 @@ class _MessageScreenDoctorState extends State<MessageScreenDoctor> {
                 } else if (snapshot.hasError) {
                   return Center(child: Text('Error: ${snapshot.error}'));
                 } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                  return const Center(child: Text('No messages found.'));
+                  return const Center(child: Text('Không có tin nhắn.'));
                 } else {
                   List<MessageData> messages = snapshot.data!;
                   return ListView.builder(

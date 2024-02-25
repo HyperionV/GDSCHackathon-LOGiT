@@ -54,7 +54,7 @@ class SymptomReportDoctor extends StatefulWidget {
 
 class _SymptomReportDoctorState extends State<SymptomReportDoctor> {
   final Color iconColor = Color.fromARGB(255, 15, 145, 133);
-  String selectedFilter = 'All';
+  String selectedFilter = 'Tất cả';
 
   @override
   Widget build(BuildContext context) {
@@ -71,8 +71,8 @@ class _SymptomReportDoctorState extends State<SymptomReportDoctor> {
               title: Padding(
                 padding: const EdgeInsets.only(left: 55),
                 child: Text(
-                  'Symptom Report',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  'Báo cáo triệu chứng',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
               ),
               leading: IconButton(
@@ -90,7 +90,7 @@ class _SymptomReportDoctorState extends State<SymptomReportDoctor> {
                         return AlertDialog(
                           title: Center(
                             child: Text(
-                              'Send appointment request',
+                              'Gửi yêu cầu đặt lịch khám',
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500,
@@ -109,7 +109,7 @@ class _SymptomReportDoctorState extends State<SymptomReportDoctor> {
                                 ),
                                 const SizedBox(height: 20),
                                 Text(
-                                  'Notify this patient to make an appointment',
+                                  'Thông báo đến bệnh nhân này để yêu cầu đặt lịch khám',
                                   textAlign: TextAlign.center,
                                 ),
                                 const SizedBox(height: 20),
@@ -131,7 +131,7 @@ class _SymptomReportDoctorState extends State<SymptomReportDoctor> {
                                     );
                                     Navigator.pop(context);
                                   },
-                                  child: Text('Request'),
+                                  child: Text('Yêu cầu'),
                                 ),
                               ],
                             ),
@@ -162,7 +162,7 @@ class _SymptomReportDoctorState extends State<SymptomReportDoctor> {
                     color: iconColor,
                   ),
                 ),
-                const SizedBox(width: 12)
+                const SizedBox(width: 6)
               ],
             ),
             body: Column(
@@ -201,7 +201,7 @@ class _SymptomReportDoctorState extends State<SymptomReportDoctor> {
                                     ),
                                     iconSize: 24,
                                     elevation: 16,
-                                    hint: Text('Choose a filter'),
+                                    hint: Text('Chọn bộ lọc'),
                                     style: TextStyle(color: Colors.black),
                                     underline: SizedBox(),
                                     isExpanded: true,
@@ -211,7 +211,7 @@ class _SymptomReportDoctorState extends State<SymptomReportDoctor> {
                                       });
                                     },
                                     items: <String>[
-                                      'All',
+                                      'Tất cả',
                                       'Option 1',
                                       'Option 2',
                                       'Option 3'
@@ -256,7 +256,7 @@ class _SymptomReportDoctorState extends State<SymptomReportDoctor> {
                                     ),
                                   ),
                                   label: Text(
-                                    'Filter',
+                                    'Bộ lọc',
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
@@ -272,7 +272,7 @@ class _SymptomReportDoctorState extends State<SymptomReportDoctor> {
                         widget.treatment.medicalRecord.reports.isEmpty
                             ? Center(
                                 child: Text(
-                                  'No reports available',
+                                  'Không có báo cáo',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w500,

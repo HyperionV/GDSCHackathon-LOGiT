@@ -13,7 +13,7 @@ class _MedicalReminderState extends State<MedicalReminder> {
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Medical Reminder'),
+        title: const Text('Nhắc nhở Y Tế'),
       ),
       body: Center(
         child: Row(
@@ -23,12 +23,12 @@ class _MedicalReminderState extends State<MedicalReminder> {
               icon: Icon(Icons.upload),
               onPressed: () {},
               style: ButtonStyle(),
-              label: Text('Upload'),
+              label: Text('Đăng tải'),
             ),
             ElevatedButton.icon(
               icon: Icon(Icons.camera_alt_outlined),
               onPressed: () {},
-              label: Text('Scan'),
+              label: Text('Quét'),
             ),
           ],
         ),

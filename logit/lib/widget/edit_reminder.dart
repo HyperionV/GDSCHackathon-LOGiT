@@ -68,7 +68,7 @@ class _EditReminderModalState extends State<EditReminderModal> {
           Row(
             children: [
               const Text(
-                'Edit Reminder',
+                'Chỉnh sửa nhắc nhở',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -113,7 +113,7 @@ class _EditReminderModalState extends State<EditReminderModal> {
                     children: [
                       Icon(Icons.access_time),
                       const SizedBox(width: 8.0),
-                      Text('From: ', style: TextStyle(fontSize: 16.0)),
+                      Text('Từ: ', style: TextStyle(fontSize: 16.0)),
                       const Spacer(),
                       TextButton(
                         onPressed: () => _selectTime(context, true),
@@ -131,7 +131,7 @@ class _EditReminderModalState extends State<EditReminderModal> {
                     children: [
                       Icon(Icons.access_time),
                       const SizedBox(width: 8.0),
-                      Text('To:', style: TextStyle(fontSize: 16.0)),
+                      Text('Đến:', style: TextStyle(fontSize: 16.0)),
                       const Spacer(),
                       TextButton(
                         onPressed: () => _selectTime(context, false),
@@ -152,7 +152,7 @@ class _EditReminderModalState extends State<EditReminderModal> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: const Text('Cancel'),
+                child: const Text('Hủy'),
               ),
               const SizedBox(width: 8.0),
               ElevatedButton(
@@ -166,7 +166,7 @@ class _EditReminderModalState extends State<EditReminderModal> {
                   updateSchedule();
                   Navigator.pop(context);
                 },
-                child: const Text('Save'),
+                child: const Text('Lưu'),
               ),
             ],
           ),

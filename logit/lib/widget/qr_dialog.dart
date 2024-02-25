@@ -40,7 +40,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
           ? null
           : Center(
               child: Text(
-                'Scan QR or Enter Code',
+                'Quét mã QR hoặc nhập mã',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
               ),
             ),
@@ -71,7 +71,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                           size: 75,
                         ),
                         const SizedBox(height: 10),
-                        Text('Connection request accepted.'),
+                        Text('Yêu cầu kết nối được xác nhận.'),
                       ],
                     );
                   } else {
@@ -81,7 +81,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                         const SizedBox(height: 20),
                         CircularProgressIndicator(),
                         const SizedBox(height: 10),
-                        Text('Waiting for confirmation...'),
+                        Text('Bác sĩ đang xác nhận kết nối...'),
                       ],
                     );
                   }
@@ -111,7 +111,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                 TextField(
                   controller: _codeController,
                   decoration: InputDecoration(
-                    labelText: 'Enter Code',
+                    labelText: 'Nhập mã',
                   ),
                   enabled: !isScanning,
                 ),
@@ -123,7 +123,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text('Cancel'),
+          child: Text('Hủy'),
         ),
         if (!isWaitingForConfirmation)
           TextButton(
@@ -152,7 +152,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                 });
               }
             },
-            child: Text(isScanning ? 'Stop Scanning' : 'Submit'),
+            child: Text(isScanning ? 'Dừng quét' : 'Gửi'),
           ),
       ],
     );

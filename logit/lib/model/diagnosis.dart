@@ -24,7 +24,7 @@ Future<List<DiagnosisData>> fetchDiagnosis(String medicalRecordUid) async {
       .get();
 
   if (diagnosisSnapshot.docs.isEmpty) {
-    return []; // Return an empty list if the collection doesn't exist
+    return [];
   }
 
   return diagnosisSnapshot.docs.map((doc) {

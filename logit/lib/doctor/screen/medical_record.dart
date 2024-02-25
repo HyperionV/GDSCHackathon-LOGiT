@@ -30,7 +30,7 @@ class _MedicalRecordState extends State<MedicalRecord> {
         title: Padding(
           padding: const EdgeInsets.only(left: 70),
           child: Text(
-            'Medical Record',
+            'Hồ sơ bệnh án',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
           ),
         ),
@@ -79,7 +79,7 @@ class _MedicalRecordState extends State<MedicalRecord> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Patient Name: ',
+                            'Tên bệnh nhân: ',
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
@@ -99,7 +99,7 @@ class _MedicalRecordState extends State<MedicalRecord> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Record ID:',
+                            'ID bệnh án:',
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
@@ -119,7 +119,7 @@ class _MedicalRecordState extends State<MedicalRecord> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Diagnosis: ',
+                            'Chẩn đoán: ',
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
@@ -139,7 +139,7 @@ class _MedicalRecordState extends State<MedicalRecord> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Critical: ',
+                            'Bất thường: ',
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
@@ -159,7 +159,7 @@ class _MedicalRecordState extends State<MedicalRecord> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Facility: ',
+                            'Cơ sở khám bệnh: ',
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
@@ -185,7 +185,7 @@ class _MedicalRecordState extends State<MedicalRecord> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: const Text(
-                'Diagnosis History:',
+                'Lịch sử chẩn đoán:',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
               ),
             ),
@@ -194,7 +194,7 @@ class _MedicalRecordState extends State<MedicalRecord> {
                 ? Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      'No diagnosis history',
+                      'Không có lịch sử chẩn đoán',
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
                     ),

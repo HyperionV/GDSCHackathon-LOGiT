@@ -20,7 +20,7 @@ class _HealthBlogState extends State<HealthBlog> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ScreenHeader('Health Blog'),
+          const ScreenHeader('Blog sức khỏe'),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 0),
             decoration: BoxDecoration(
@@ -39,7 +39,7 @@ class _HealthBlogState extends State<HealthBlog> {
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'Search for articles, titles, etc.',
+                      hintText: 'Tìm bài báo theo tên, tiêu đề,...',
                       border: InputBorder.none,
                     ),
                   ),
@@ -50,7 +50,7 @@ class _HealthBlogState extends State<HealthBlog> {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 16),
             child: Text(
-              'Bookmarked',
+              'Đã lưu',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -69,7 +69,8 @@ class _HealthBlogState extends State<HealthBlog> {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: bookmarkedArticles.isEmpty
-                      ? Center(child: const Text('No bookmarked articles yet!'))
+                      ? Center(
+                          child: const Text('Không có bài viết nào được lưu.'))
                       : SizedBox(
                           height: bookmarkedArticles.isEmpty ? 0 : 220,
                           child: ListView.builder(
@@ -91,7 +92,7 @@ class _HealthBlogState extends State<HealthBlog> {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 16),
             child: Text(
-              'Discovery',
+              'Khám phá',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

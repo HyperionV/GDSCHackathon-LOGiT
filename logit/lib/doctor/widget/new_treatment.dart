@@ -166,7 +166,7 @@ class _CreateTreatmentModalState extends State<CreateTreatmentModal> {
           Row(
             children: [
               const Text(
-                'Create Treatment',
+                'Tạo liệu trình mới',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -178,7 +178,7 @@ class _CreateTreatmentModalState extends State<CreateTreatmentModal> {
           TextField(
             controller: _titleController,
             decoration: InputDecoration(
-              hintText: 'Enter a title for this treatment',
+              hintText: 'Nhập tiêu đề cho liệu trình này',
               prefixIcon: const Icon(Icons.title),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
@@ -203,7 +203,7 @@ class _CreateTreatmentModalState extends State<CreateTreatmentModal> {
           TextField(
             controller: _diagnosisController,
             decoration: InputDecoration(
-              hintText: 'Enter diagnosis',
+              hintText: 'Nhập chẩn đoán',
               prefixIcon: const Icon(Icons.edit_document),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
@@ -228,7 +228,7 @@ class _CreateTreatmentModalState extends State<CreateTreatmentModal> {
           TextField(
             controller: _criticalController,
             decoration: InputDecoration(
-              hintText: 'Enter critical symptoms',
+              hintText: 'Nhập triệu chứng bất thường',
               prefixIcon: const Icon(Icons.notification_important_rounded),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
@@ -253,7 +253,7 @@ class _CreateTreatmentModalState extends State<CreateTreatmentModal> {
           TextField(
             controller: _recordIDController,
             decoration: InputDecoration(
-              hintText: 'Enter local record ID',
+              hintText: 'Nhập ID bệnh án',
               prefixIcon: const Icon(Icons.library_books_rounded),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
@@ -278,7 +278,7 @@ class _CreateTreatmentModalState extends State<CreateTreatmentModal> {
           TextField(
             controller: _facilityController,
             decoration: InputDecoration(
-              hintText: 'Enter examination facility',
+              hintText: 'Nhập cơ sở khám bệnh',
               prefixIcon: const Icon(Icons.location_city_outlined),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
@@ -313,7 +313,7 @@ class _CreateTreatmentModalState extends State<CreateTreatmentModal> {
                     children: [
                       Icon(Icons.calendar_today),
                       const SizedBox(width: 8.0),
-                      Text('Re-examination:', style: TextStyle(fontSize: 16.0)),
+                      Text('Tái khám:', style: TextStyle(fontSize: 16.0)),
                       const Spacer(),
                       TextButton(
                         onPressed: () => _selectDate(context),
@@ -330,7 +330,7 @@ class _CreateTreatmentModalState extends State<CreateTreatmentModal> {
                       Icon(Icons.access_time),
                       const SizedBox(width: 8.0),
                       Text(
-                        'At: ',
+                        'Lúc: ',
                         style: TextStyle(fontSize: 16.0),
                       ),
                       const Spacer(),
@@ -355,7 +355,7 @@ class _CreateTreatmentModalState extends State<CreateTreatmentModal> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: const Text('Cancel'),
+                child: const Text('Hủy'),
               ),
               const SizedBox(width: 8.0),
               ElevatedButton(
@@ -363,7 +363,7 @@ class _CreateTreatmentModalState extends State<CreateTreatmentModal> {
                   onSaveAndPop();
                   Navigator.pop(context);
                 },
-                child: const Text('Save'),
+                child: const Text('Lưu'),
               ),
             ],
           ),

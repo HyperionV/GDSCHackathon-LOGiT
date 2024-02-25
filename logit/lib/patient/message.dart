@@ -16,7 +16,7 @@ class MessageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Messages'),
+        title: const Text('Tin nhắn'),
       ),
       body: FutureBuilder<List<MessageData>>(
         future: fetchMessages(userUid, otherUserUid),
@@ -26,7 +26,7 @@ class MessageScreen extends StatelessWidget {
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return const Center(child: Text('No messages found.'));
+            return const Center(child: Text('Không tìm thấy tin nhắn.'));
           } else {
             List<MessageData> messages = snapshot.data!;
             return ListView.builder(

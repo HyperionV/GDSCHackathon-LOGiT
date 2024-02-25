@@ -53,6 +53,7 @@ dependencies:
   qr_code_scanner: ^1.0.1
   flutter_launcher_icons: ^0.11.0
   syncfusion_flutter_calendar: ^24.2.6
+  firebase_messaging: ^14.7.16
 
 
 

@@ -62,10 +62,10 @@ class _ReminderScreenState extends State<ReminderScreen> {
 
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: const Text('Reminder removed'),
+        content: const Text('Đã xóa lời nhắc!'),
         duration: const Duration(seconds: 4),
         action: SnackBarAction(
-          label: 'Undo',
+          label: 'Hủy',
           onPressed: () {
             setState(
               () {
@@ -111,7 +111,7 @@ class _ReminderScreenState extends State<ReminderScreen> {
               Padding(
                 padding: EdgeInsets.only(left: 24.0, right: 24),
                 child: Text(
-                  'Reminder',
+                  'Lời Nhắc',
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -169,7 +169,7 @@ class _ReminderScreenState extends State<ReminderScreen> {
                               }).toList()
                             : [
                                 const SizedBox(height: 8),
-                                const Text('There is no event for this date.'),
+                                const Text('Không có sự kiện nào cho ngày này.'),
                               ],
                       ),
                     ),

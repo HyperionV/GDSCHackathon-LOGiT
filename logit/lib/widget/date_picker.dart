@@ -24,7 +24,7 @@ class _DatePickerState extends State<DatePicker> {
     super.initState();
   }
 
-  String textToDisplay = 'View full calendar';
+  String textToDisplay = 'Hiển thị lịch đầy đủ';
 
   @override
   Widget build(BuildContext context) {
@@ -42,10 +42,10 @@ class _DatePickerState extends State<DatePicker> {
                   () {
                     if (current is FullCalendar) {
                       current = DateRow(widget.onDateSelected);
-                      textToDisplay = 'View full calendar';
+                      textToDisplay = 'Hiển thị lịch đầy đủ';
                     } else {
                       current = FullCalendar(widget.onDateSelected);
-                      textToDisplay = 'View recent dates';
+                      textToDisplay = 'Hiển thị gần đây';
                     }
                       widget.onDateSelected(DateTime.now());
                   },

@@ -73,7 +73,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                       children: [
                         const SizedBox(height: 16.0),
                         Text(
-                          'Pending request',
+                          'Yêu cầu chờ xác nhận',
                           style: const TextStyle(
                               fontSize: 20, fontWeight: FontWeight.w500),
                         ),
@@ -92,7 +92,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     const Text(
-                                      'Full name:',
+                                      'Tên đầy đủ:',
                                       style: TextStyle(
                                         fontWeight: FontWeight.w500,
                                       ),
@@ -107,7 +107,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     const Text(
-                                      'Date of birth:',
+                                      'Ngày sinh:',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w500),
                                     ),
@@ -119,7 +119,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     const Text(
-                                      'Address:',
+                                      'Địa chỉ:',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w500),
                                     ),
@@ -143,7 +143,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     const Text(
-                                      'Phone number:',
+                                      'Số điện thoại:',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w500),
                                     ),
@@ -163,7 +163,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                                 Navigator.pop(context);
                               },
                               child: Text(
-                                'Deny',
+                                'Từ chối',
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: Color.fromARGB(255, 90, 161, 126),
@@ -192,7 +192,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                                 });
                               },
                               child: Text(
-                                'Accept',
+                                'Chấp nhận',
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: Color.fromARGB(255, 90, 161, 126),
@@ -208,7 +208,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                   return Column(
                     children: [
                       const Text(
-                        'Connect with patient',
+                        'Kết nối với bệnh nhân',
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.w500,
@@ -239,7 +239,7 @@ class _QRCodeDialogState extends State<QRCodeDialog> {
                               );
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
-                                  content: Text('Copied to clipboard'),
+                                  content: Text('Đã sao chép mã vào bộ nhớ đệm.'),
                                 ),
                               );
                             },

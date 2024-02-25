@@ -71,7 +71,7 @@ class _DiagnosisCardState extends State<DiagnosisCard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Diagnosis: ',
+                    'Chẩn đoán: ',
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,

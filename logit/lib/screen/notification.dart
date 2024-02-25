@@ -29,7 +29,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        ScreenHeader('Notification'),
+        ScreenHeader('Thông Báo'),
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 0),
           decoration: BoxDecoration(
@@ -48,7 +48,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               Expanded(
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: 'Search for sender, message, etc.',
+                    hintText: 'Tìm người gửi, thông báo,...',
                     border: InputBorder.none,
                   ),
                 ),
@@ -106,7 +106,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               return Expanded(
                 child: Center(
                   child: Text(
-                    'No notifications at the moment.',
+                    'Hiện không có thông báo mới.',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.grey,

@@ -92,7 +92,7 @@ class _MainScreenDoctorState extends State<MainScreenDoctor> {
         },
       ),
       bottomNavigationBar: GNav(
-        gap: 4,
+        gap: 2,
         color: const Color.fromARGB(255, 75, 153, 78),
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         activeColor: const Color.fromARGB(255, 203, 26, 13),
@@ -102,10 +102,10 @@ class _MainScreenDoctorState extends State<MainScreenDoctor> {
         },
         selectedIndex: widget.initialPage,
         tabs: const [
-          GButton(icon: Icons.person, text: 'Profile'),
-          GButton(icon: Icons.health_and_safety, text: 'Health Diary'),
-          GButton(icon: Icons.notifications_on, text: 'Notifications'),
-          GButton(icon: Icons.event_note_rounded, text: 'Reminders')
+          GButton(icon: Icons.person, text: 'Thông tin'),
+          GButton(icon: Icons.health_and_safety, text: 'Nhật ký sức khỏe'),
+          GButton(icon: Icons.notifications_on, text: 'Thông báo'),
+          GButton(icon: Icons.event_note_rounded, text: 'Lời nhắc')
         ],
       ),
     );

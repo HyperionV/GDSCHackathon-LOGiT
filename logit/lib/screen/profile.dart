@@ -69,7 +69,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 240, 240, 240),
         centerTitle: true,
-        title: const Text('Profile'),
+        title: const Text('Thông tin'),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -90,7 +90,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 const Spacer(),
                 InkWell(
                   onTap: () {},
-                  child: InfoBox('Settings', Icon(Icons.settings), false),
+                  child: InfoBox('Cài đặt', Icon(Icons.settings), false),
                 ),
                 InkWell(
                     onTap: () {
@@ -103,7 +103,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       );
                       events.clear();
                     },
-                    child: InfoBox('Logout', Icon(Icons.logout), false)),
+                    child: InfoBox('Thoát', Icon(Icons.logout), false)),
                 const SizedBox(height: 32),
               ],
             ),

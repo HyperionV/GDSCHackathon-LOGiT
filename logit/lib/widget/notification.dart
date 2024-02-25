@@ -10,6 +10,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:logit/doctor/screen/message.dart';
 import 'package:logit/doctor/screen/home.dart';
 import 'package:logit/patient/message.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 
 class DisplayMessage extends StatelessWidget {
   final String string;
@@ -64,21 +65,17 @@ class NotificationItem extends StatefulWidget {
 
 class _NotificationItemState extends State<NotificationItem> {
   late Future<UserData> _userDataFuture;
-  // late TreatmentData? _treatmentDataFuture;
 
-  // void initTreatmentData() async {
-  //   if (widget.notification.treatmentAttached.isNotEmpty) {
-  //     _treatmentDataFuture =
-  //         await fetchTreatmentWithUid(widget.notification.treatmentAttached);
-  //   } else {
-  //     _treatmentDataFuture = null;
-  //   }
+  // void setupPushNotification() async {
+  //   final fcm = FirebaseMessaging.instance;
+  //   await fcm.requestPermission();
+  //   final token = await fcm.getToken();
   // }
 
   void initState() {
     _userDataFuture = fetchWithUID(widget.notification.sender);
-    // initTreatmentData();
     super.initState();
+    // setupPushNotification();
   }
 
   @override
@@ -111,7 +108,7 @@ class _NotificationItemState extends State<NotificationItem> {
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 8),
                 child: Text(
-                  '${formatddMMyy(widget.notification.createTime.toDate())} at ${formatTime(widget.notification.createTime.toDate().hour + widget.notification.createTime.toDate().minute / 60)}',
+                  '${formatddMMyy(widget.notification.createTime.toDate())} lúc ${formatTime(widget.notification.createTime.toDate().hour + widget.notification.createTime.toDate().minute / 60)}',
                   style: TextStyle(
                     fontSize: 13,
                   ),
@@ -201,7 +198,7 @@ class _NotificationItemState extends State<NotificationItem> {
                           widget.updateFunction,
                           ReminderEvent(
                             widget.notification.timeAttached,
-                            'Appointment with ${sender.fullName}',
+                            'Lịch khám với ${sender.fullName}',
                             widget.notification.timeAttached.toDate().hour *
                                 1.0,
                             widget.notification.timeAttached.toDate().minute /
@@ -243,7 +240,7 @@ class _NotificationItemState extends State<NotificationItem> {
             ),
           );
         } else {
-          return Text('No user data found');
+          return Text('Không có thông tin người dùng');
         }
       },
     );

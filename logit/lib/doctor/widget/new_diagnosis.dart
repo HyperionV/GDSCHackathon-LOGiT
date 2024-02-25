@@ -96,7 +96,7 @@ class _CreateDiagnosisState extends State<CreateDiagnosis> {
           Row(
             children: [
               const Text(
-                'Create Diagnosis',
+                'Tạo chấn đoán',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -108,7 +108,7 @@ class _CreateDiagnosisState extends State<CreateDiagnosis> {
           TextField(
             controller: _diagnosisController,
             decoration: InputDecoration(
-              hintText: 'Enter diagnosis',
+              hintText: 'Nhập tiêu đề chẩn đoán',
               prefixIcon: const Icon(Icons.edit_document),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
@@ -136,7 +136,7 @@ class _CreateDiagnosisState extends State<CreateDiagnosis> {
               expands: true,
               controller: _contentController,
               decoration: InputDecoration(
-                hintText: 'Enter content of the diagnosis',
+                hintText: 'Nhập nội dung của chẩn đoán',
                 prefixIcon: const Icon(Icons.title),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16),
@@ -174,7 +174,7 @@ class _CreateDiagnosisState extends State<CreateDiagnosis> {
                     children: [
                       Icon(Icons.calendar_today),
                       const SizedBox(width: 8.0),
-                      Text('Re-examination:', style: TextStyle(fontSize: 16.0)),
+                      Text('Tái khám:', style: TextStyle(fontSize: 16.0)),
                       const Spacer(),
                       TextButton(
                         onPressed: () => _selectDate(context),
@@ -191,7 +191,7 @@ class _CreateDiagnosisState extends State<CreateDiagnosis> {
                       Icon(Icons.access_time),
                       const SizedBox(width: 8.0),
                       Text(
-                        'At: ',
+                        'Lúc: ',
                         style: TextStyle(fontSize: 16.0),
                       ),
                       const Spacer(),
@@ -216,7 +216,7 @@ class _CreateDiagnosisState extends State<CreateDiagnosis> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: const Text('Cancel'),
+                child: const Text('Hủy'),
               ),
               const SizedBox(width: 8.0),
               ElevatedButton(
@@ -224,7 +224,7 @@ class _CreateDiagnosisState extends State<CreateDiagnosis> {
                   onSaveAndPop();
                   Navigator.pop(context);
                 },
-                child: const Text('Save'),
+                child: const Text('Lưu'),
               ),
             ],
           ),

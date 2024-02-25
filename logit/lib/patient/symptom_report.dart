@@ -57,7 +57,7 @@ class SymptomReport extends StatefulWidget {
 
 class _SymptomReportState extends State<SymptomReport> {
   final Color iconColor = Color.fromARGB(255, 15, 145, 133);
-  String selectedFilter = 'All';
+  String selectedFilter = 'Tất cả';
 
   void reload() async {
     widget.medicalRecord.reports = await fetchReports(widget.medicalRecord.uid);
@@ -80,8 +80,8 @@ class _SymptomReportState extends State<SymptomReport> {
               title: Padding(
                 padding: const EdgeInsets.only(left: 55),
                 child: Text(
-                  'Symptom Report',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  'Báo cáo triệu chứng',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
               ),
               leading: IconButton(
@@ -104,7 +104,7 @@ class _SymptomReportState extends State<SymptomReport> {
                   },
                   icon: Icon(
                     Icons.notifications_none,
-                    size: 35,
+                    size: 25,
                     color: iconColor,
                   ),
                 ),
@@ -120,11 +120,11 @@ class _SymptomReportState extends State<SymptomReport> {
                   },
                   icon: Icon(
                     Icons.info_outline_rounded,
-                    size: 35,
+                    size: 25,
                     color: iconColor,
                   ),
                 ),
-                const SizedBox(width: 12)
+                const SizedBox(width: 6)
               ],
             ),
             body: Column(
@@ -197,7 +197,7 @@ class _SymptomReportState extends State<SymptomReport> {
                                 Row(
                                   children: [
                                     Text(
-                                      'Phone: ',
+                                      'Số điện thoại: ',
                                       style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w500,
@@ -268,7 +268,7 @@ class _SymptomReportState extends State<SymptomReport> {
                                     ),
                                     iconSize: 24,
                                     elevation: 16,
-                                    hint: Text('Choose a filter'),
+                                    hint: Text('Chọn bộ lọc'),
                                     style: TextStyle(color: Colors.black),
                                     underline: SizedBox(),
                                     isExpanded: true,
@@ -278,7 +278,7 @@ class _SymptomReportState extends State<SymptomReport> {
                                       });
                                     },
                                     items: <String>[
-                                      'All',
+                                      'Tất cả',
                                       'Option 1',
                                       'Option 2',
                                       'Option 3'
@@ -323,7 +323,7 @@ class _SymptomReportState extends State<SymptomReport> {
                                     ),
                                   ),
                                   label: Text(
-                                    'Filter',
+                                    'Lọc',
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,

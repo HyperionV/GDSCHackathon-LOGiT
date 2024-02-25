@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-List<String> week = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+List<String> week = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'];
 
 class DateButton extends StatelessWidget {
   final DateTime date;
@@ -50,7 +50,7 @@ class DateButton extends StatelessWidget {
                 color: !isSelected
                     ? Color.fromARGB(255, 105, 110, 116)
                     : Color.fromARGB(255, 250, 250, 250),
-                fontSize: 11,
+                fontSize: 15,
                 fontWeight: FontWeight.w600,
               ),
             ),

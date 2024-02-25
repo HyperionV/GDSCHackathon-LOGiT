@@ -2,13 +2,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 List<String> message = [
-  ' sent you a message.',
-  ' confirmed your appointment request.',
-  ' requested you for an appointment.',
-  ' booked an appointment.',
-  ' accepted your connection request.',
-  ' created a new medical record.',
-  ' has a serious symptom, please contact the patient as soon as possible.',
+  ' đã gửi cho bạn một tin nhắn.',
+  ' đã xác nhận yêu cầu đặt lịch khám của bạn.',
+  ' đã yêu cầu bạn đặt lịch khám.',
+  ' đã đặt lịch khám.',
+  ' đã chấp nhận yêu cầu kết nối.',
+  ' đã tạo một báo cáo sức khỏe mới.',
+  ' đã có dấu hiệu bất thường, hãy liên hệ với bệnh nhân sớm nhất có thể.',
 ];
 
 // type of notification

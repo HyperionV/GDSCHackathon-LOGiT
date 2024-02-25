@@ -49,6 +49,6 @@ Future<UserData> fetchWithUID(String uid) async {
       data['emergencyContact'],
     );
   } else {
-    throw Exception('User data not found');
+    throw Exception('Không tìm thấy dữ liệu người dùng');
   }
 }

@@ -25,21 +25,21 @@ String formatMMddYY(String dateStr) {
 
   final monthNames = [
     '',
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec'
+    'Tháng 1',
+    'Tháng 2',
+    'Tháng 3',
+    'Tháng 4',
+    'Tháng 5',
+    'Tháng 6',
+    'Tháng 7',
+    'Tháng 8',
+    'Tháng 9',
+    'Tháng 10',
+    'Tháng 11',
+    'Tháng 12'
   ];
 
-  final formattedDate = '${monthNames[int.parse(month)]} $day, $year';
+  final formattedDate = 'Ngày $day ${monthNames[int.parse(month)]}, $year';
   return formattedDate;
 }
 

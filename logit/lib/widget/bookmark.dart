@@ -14,7 +14,7 @@ class BookmarkCard extends StatelessWidget {
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Could not launch ${article.title}'),
+          content: Text('Không thể mở ${article.title}'),
         ),
       );
     }

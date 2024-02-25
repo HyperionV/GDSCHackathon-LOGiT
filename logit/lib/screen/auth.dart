@@ -44,7 +44,7 @@ class _OtherMethod extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(right: 16),
               child: Text(
-                'Sign in with $_name',
+                'Đăng nhập với $_name',
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   color: Color(0xFF101522),
@@ -132,30 +132,10 @@ class _AuthScreenState extends State<AuthScreen> {
       ScaffoldMessenger.of(context).clearSnackBars();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(error.message ?? 'Authentication failed'),
+          content: Text(error.message ?? 'Đăng nhập thất bại'),
         ),
       );
     }
-  }
-
-  void _showPopup() {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: const Text('Popup Title'),
-          content: const Text('Popup Content'),
-          actions: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: const Text('Cancel'),
-            ),
-          ],
-        );
-      },
-    );
   }
 
   Widget _loginForm() {
@@ -174,7 +154,7 @@ class _AuthScreenState extends State<AuthScreen> {
               children: [
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: 'Enter your email',
+                    labelText: 'Nhập email',
                     prefixIcon: const Icon(Icons.email),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(24),
@@ -199,7 +179,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     if (value == null ||
                         value.trim().isEmpty ||
                         !value.contains('@')) {
-                      return 'Please enter a valid email address.';
+                      return 'Hãy nhập đúng email của bạn!';
                     }
                     return null;
                   },
@@ -210,7 +190,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 const SizedBox(height: 16),
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: 'Enter your password',
+                    labelText: 'Nhập mật khẩu',
                     prefixIcon: const Icon(Icons.password),
                     suffixIcon: IconButton(
                       icon: Icon(
@@ -243,7 +223,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   obscureText: _obscureText,
                   validator: (value) {
                     if (value == null || value.trim().length < 6) {
-                      return 'Password must be at least 6 characters long.';
+                      return 'Mật khẩu phải dài hơn 6 ký tự.';
                     }
                     return null;
                   },
@@ -255,7 +235,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () {},
-                    child: const Text('Forgot password?'),
+                    child: const Text('Quên mật khẩu?'),
                   ),
                 ),
                 const SizedBox(height: 12),
@@ -272,7 +252,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 16.0),
-                      child: Text(_isLogin ? 'Login' : 'Signup'),
+                      child: Text(_isLogin ? 'Đăng nhập' : 'Đăng ký'),
                     ),
                   ),
                 ),
@@ -286,12 +266,12 @@ class _AuthScreenState extends State<AuthScreen> {
                     );
                   },
                   child: Text(_isLogin
-                      ? 'Create an account'
-                      : 'I already have an account'),
+                      ? 'Tạo tài khoản'
+                      : 'Tôi đã có tài khoản'),
                 ),
                 const SizedBox(height: 16),
                 const Text(
-                  'OR',
+                  'Hoặc',
                   style: TextStyle(
                     fontSize: 20,
                   ),
@@ -322,7 +302,7 @@ class _AuthScreenState extends State<AuthScreen> {
             children: [
               TextFormField(
                 decoration: InputDecoration(
-                  labelText: 'Enter your name',
+                  labelText: 'Nhập tên của bạn',
                   prefixIcon: const Icon(Icons.person),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(24),
@@ -345,7 +325,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 textCapitalization: TextCapitalization.words,
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
-                    return 'Please enter your name.';
+                    return 'Hãy nhập tên của bạn tại đây.';
                   }
                   return null;
                 },
@@ -356,7 +336,7 @@ class _AuthScreenState extends State<AuthScreen> {
               const SizedBox(height: 16),
               TextFormField(
                 decoration: InputDecoration(
-                  labelText: 'Enter your email',
+                  labelText: 'Email của bạn',
                   prefixIcon: const Icon(Icons.email),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(24),
@@ -381,7 +361,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   if (value == null ||
                       value.trim().isEmpty ||
                       !value.contains('@')) {
-                    return 'Please enter a valid email address.';
+                    return 'Hãy nhập đúng email của bạn!';
                   }
                   return null;
                 },
@@ -392,7 +372,7 @@ class _AuthScreenState extends State<AuthScreen> {
               const SizedBox(height: 16),
               TextFormField(
                 decoration: InputDecoration(
-                  labelText: 'Enter your password',
+                  labelText: 'Nhập mật khẩu',
                   prefixIcon: const Icon(Icons.password),
                   suffixIcon: IconButton(
                     icon: Icon(
@@ -425,7 +405,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 obscureText: _obscureText,
                 validator: (value) {
                   if (value == null || value.trim().length < 6) {
-                    return 'Password must be at least 6 characters long.';
+                    return 'Mật khẩu phải nhiều hơn 6 ký tự.';
                   }
                   return null;
                 },
@@ -448,7 +428,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                   const Flexible(
                     child: Text(
-                      'I agree to the LOGiT Terms of Service and Privacy Policy',
+                      'Tôi đồng ý với điều khoản và chính sách của LOGiT',
                       overflow: TextOverflow.visible,
                       style: TextStyle(
                         fontSize: 16,
@@ -471,7 +451,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16.0),
-                    child: Text(_isLogin ? 'Login' : 'Signup'),
+                    child: Text(_isLogin ? 'Đăng nhập' : 'Đăng ký'),
                   ),
                 ),
               ),
@@ -485,8 +465,8 @@ class _AuthScreenState extends State<AuthScreen> {
                   );
                 },
                 child: Text(_isLogin
-                    ? 'Create an account'
-                    : 'I already have an account'),
+                    ? 'Tạo tài khoản'
+                    : 'Tôi đã có tài khoản'),
               ),
             ],
           ),
@@ -501,7 +481,7 @@ class _AuthScreenState extends State<AuthScreen> {
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
         centerTitle: true,
-        title: Text(_isLogin ? 'Login' : 'Register'),
+        title: Text(_isLogin ? 'Đăng nhập' : 'Đăng ký'),
       ),
       body: _isLogin ? _loginForm() : _registerForm(),
     );

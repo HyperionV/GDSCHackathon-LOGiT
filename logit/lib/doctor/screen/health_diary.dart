@@ -70,7 +70,7 @@ class _HealthDiaryState extends State<HealthDiary> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Health Diary',
+                          'Nhật ký sức khỏe',
                           style: const TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
@@ -107,7 +107,7 @@ class _HealthDiaryState extends State<HealthDiary> {
                             SizedBox(
                               width: 250,
                               child: Text(
-                                'Good afternoon, have a great working day!',
+                                'Xin chào, chúc bạn có một ngày làm việc hiệu quả!',
                                 style: TextStyle(
                                   color: Color.fromARGB(255, 75, 75, 75),
                                   fontSize: 16,
@@ -145,7 +145,7 @@ class _HealthDiaryState extends State<HealthDiary> {
                               children: [
                                 const SizedBox(height: 13),
                                 Text(
-                                  'Current Treatments',
+                                  'Các liệu trình hiện tại',
                                   style: TextStyle(
                                       color: textColor1,
                                       fontSize: 15,
@@ -188,7 +188,7 @@ class _HealthDiaryState extends State<HealthDiary> {
                               children: [
                                 const SizedBox(height: 13),
                                 Text(
-                                  'Past Treatments',
+                                  'Các bản ghi trước',
                                   style: TextStyle(
                                       color: textColor1,
                                       fontSize: 15,

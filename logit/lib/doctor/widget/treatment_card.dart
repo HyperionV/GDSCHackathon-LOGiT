@@ -91,7 +91,7 @@ class _TreatmentCardState extends State<TreatmentCard> {
                     ),
                     const Spacer(),
                     Text(
-                      'Last re-examination: ',
+                      'Lần tái khám trước: ',
                       style: const TextStyle(
                         fontSize: 12,
                         color: Color.fromARGB(255, 54, 169, 125),

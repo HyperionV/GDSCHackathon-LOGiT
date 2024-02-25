@@ -22,7 +22,7 @@ class _TreatmentCardState extends State<TreatmentCard> {
             widget.treatment.endDate.toDate().month != DateTime.now().month &&
             widget.treatment.endDate.toDate().day != DateTime.now().day)
         ? ' - ${widget.treatment.endDate.toDate().day}/${widget.treatment.endDate.toDate().month}/${widget.treatment.endDate.toDate().year}'
-        : 'Ongoing';
+        : 'Hiện tại';
     return '${date.day}/${date.month}/${date.year} - $end';
   }
 
@@ -90,7 +90,7 @@ class _TreatmentCardState extends State<TreatmentCard> {
                     ),
                     const Spacer(),
                     Text(
-                      'Last re-examination: ',
+                      'Lần tái khám cuối: ',
                       style: const TextStyle(
                         fontSize: 12,
                         color: Color.fromARGB(255, 54, 169, 125),

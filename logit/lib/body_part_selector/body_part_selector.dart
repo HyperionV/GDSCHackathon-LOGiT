@@ -60,11 +60,11 @@ class BodyPartSelector extends StatelessWidget {
           builder: (context) {
             final TextEditingController controller = TextEditingController();
             return AlertDialog(
-              title: const Text('Symptom description',
+              title: const Text('Mô tả triệu chứng',
                   style: TextStyle(fontSize: 15)),
               content: TextField(
                 decoration: const InputDecoration(
-                  hintText: 'Enter symptom description',
+                  hintText: 'Nhập mô tả',
                 ),
                 controller: controller,
               ),
@@ -73,7 +73,7 @@ class BodyPartSelector extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       onPressed: () => Navigator.of(context).pop(),
-                      child: const Text('Cancel'),
+                      child: const Text('Hủy'),
                     ),
                     const SizedBox(width: 60),
                     ElevatedButton(
@@ -83,7 +83,7 @@ class BodyPartSelector extends StatelessWidget {
                             .withToggledId(bodyPart, mirror: mirrored));
                         Navigator.of(context).pop();
                       },
-                      child: const Text('Done'),
+                      child: const Text('Xong'),
                     ),
                   ],
                 ),
@@ -97,11 +97,11 @@ class BodyPartSelector extends StatelessWidget {
             late TextEditingController controller =
                 TextEditingController(text: getBodyPartSymptom(bodyPart));
             return AlertDialog(
-              title: const Text('Symptom description',
+              title: const Text('Mô tả triệu chứng',
                   style: TextStyle(fontSize: 15)),
               content: TextField(
                 decoration: const InputDecoration(
-                  hintText: 'Enter symptom description',
+                  hintText: 'Nhập mô tả',
                 ),
                 controller: controller,
               ),
@@ -113,7 +113,7 @@ class BodyPartSelector extends StatelessWidget {
                         collectContent(bodyPart, controller.text);
                         Navigator.of(context).pop();
                       },
-                      child: const Text('Modify'),
+                      child: const Text('Sửa'),
                     ),
                     const SizedBox(width: 60),
                     ElevatedButton(
@@ -123,7 +123,7 @@ class BodyPartSelector extends StatelessWidget {
                             .withToggledId(bodyPart, mirror: mirrored));
                         Navigator.of(context).pop();
                       },
-                      child: const Text('Remove'),
+                      child: const Text('Xóa'),
                     ),
                   ],
                 ),

@@ -151,6 +151,8 @@ class _CreateReportState extends State<CreateReport> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> symptoms = widget.medicalRecord.critical.split(',');
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
       child: Column(
@@ -159,7 +161,7 @@ class _CreateReportState extends State<CreateReport> {
           Row(
             children: [
               const Text(
-                'Create symptom report',
+                'Tạo báo cáo triệu chứng mới',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -174,7 +176,7 @@ class _CreateReportState extends State<CreateReport> {
               expands: true,
               controller: _contentController,
               decoration: InputDecoration(
-                hintText: 'Enter symptom description',
+                hintText: 'Nhập mô tả của căn bệnh',
                 prefixIcon: const Icon(Icons.title),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16),
@@ -198,10 +200,60 @@ class _CreateReportState extends State<CreateReport> {
               maxLines: null,
             ),
           ),
-          const SizedBox(height: 16.0),
+          const SizedBox(height: 24),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: SizedBox(
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Triệu chứng nghiêm trọng:',
+                    style:
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.w300),
+                  ),
+                  const SizedBox(height: 8.0),
+                  SingleChildScrollView(
+                    child: Row(
+                      children: List.generate(
+                        symptoms.length,
+                        (index) => SizedBox(
+                          height: 44,
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 12.0),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    Color.fromARGB(255, 240, 240, 240),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                              ),
+                              child: Text(
+                                symptoms[index],
+                                style: TextStyle(
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                              onPressed: () {
+                                _contentController.text +=
+                                    symptoms[index] + '\n';
+                              },
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 25.0),
           Container(
             decoration: BoxDecoration(
-                color: const Color.fromARGB(100, 217, 217, 217),
+                color: const Color.fromARGB(255, 240, 240, 240),
                 borderRadius: BorderRadius.circular(16)),
             child: Padding(
               padding:
@@ -210,15 +262,15 @@ class _CreateReportState extends State<CreateReport> {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.calendar_today),
+                      Icon(Icons.calendar_today, size: 20),
                       const SizedBox(width: 8.0),
-                      Text('Created date:', style: TextStyle(fontSize: 16.0)),
+                      Text('Tạo ngày:', style: TextStyle(fontSize: 15.0)),
                       const Spacer(),
                       TextButton(
                         onPressed: () => _selectDate(context),
                         child: Text(
                           formatter.format(_endDate),
-                          style: TextStyle(fontSize: 16.0),
+                          style: TextStyle(fontSize: 15.0),
                         ),
                       ),
                     ],
@@ -226,18 +278,18 @@ class _CreateReportState extends State<CreateReport> {
                   Row(
                     // mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Icon(Icons.access_time),
+                      Icon(Icons.access_time, size: 20),
                       const SizedBox(width: 8.0),
                       Text(
-                        'At: ',
-                        style: TextStyle(fontSize: 16.0),
+                        'Lúc: ',
+                        style: TextStyle(fontSize: 15.0),
                       ),
                       const Spacer(),
                       TextButton(
                         onPressed: () => _selectTime(context),
                         child: Text(
                           formatTime(_endDate.hour + _endDate.minute / 60),
-                          style: TextStyle(fontSize: 16.0),
+                          style: TextStyle(fontSize: 15.0),
                         ),
                       ),
                     ],
@@ -260,12 +312,12 @@ class _CreateReportState extends State<CreateReport> {
               setState(() {
                 for (String key in symptomNote.keys) {
                   _contentController.text +=
-                      bodyPartFormat(key) + ' : ' + symptomNote[key]! + '\n';
+                      bodyPartFormat(key) + ': ' + symptomNote[key]! + '\n';
                 }
                 symptomNote.clear();
               });
             },
-            child: Text('Full body view'),
+            child: Text('Chọn trên cơ thể'),
           ),
           const SizedBox(height: 16.0),
           Row(
@@ -275,7 +327,7 @@ class _CreateReportState extends State<CreateReport> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: const Text('Cancel'),
+                child: const Text('Hủy'),
               ),
               const SizedBox(width: 8.0),
               ElevatedButton(
@@ -283,7 +335,7 @@ class _CreateReportState extends State<CreateReport> {
                   onSaveAndPop();
                   Navigator.pop(context);
                 },
-                child: const Text('Save'),
+                child: const Text('Lưu'),
               ),
             ],
           ),

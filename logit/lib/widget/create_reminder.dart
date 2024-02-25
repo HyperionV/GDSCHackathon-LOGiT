@@ -1,5 +1,3 @@
-
-
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, library_private_types_in_public_api
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -86,7 +84,7 @@ class _AddReminderModalState extends State<AddReminderModal> {
           Row(
             children: [
               const Text(
-                'Create Reminder',
+                'Tạo lời nhắc',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -98,7 +96,7 @@ class _AddReminderModalState extends State<AddReminderModal> {
           TextField(
             controller: _titleController,
             decoration: InputDecoration(
-              hintText: 'Enter a title',
+              hintText: 'Nhập tiêu đề',
               prefixIcon: const Icon(Icons.title),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
@@ -130,7 +128,7 @@ class _AddReminderModalState extends State<AddReminderModal> {
                     children: [
                       Icon(Icons.calendar_today),
                       const SizedBox(width: 8.0),
-                      Text('End Date:', style: TextStyle(fontSize: 16.0)),
+                      Text('Ngày kết thúc:', style: TextStyle(fontSize: 16.0)),
                       const Spacer(),
                       TextButton(
                         onPressed: () => _selectDate(context),
@@ -149,7 +147,7 @@ class _AddReminderModalState extends State<AddReminderModal> {
                       Icon(Icons.access_time),
                       const SizedBox(width: 8.0),
                       Text(
-                        'From: ',
+                        'Bắt đầu: ',
                         style: TextStyle(fontSize: 16.0),
                       ),
                       const Spacer(),
@@ -169,7 +167,7 @@ class _AddReminderModalState extends State<AddReminderModal> {
                     children: [
                       Icon(Icons.access_time),
                       const SizedBox(width: 8.0),
-                      Text('To:', style: TextStyle(fontSize: 16.0)),
+                      Text('Kết thúc:', style: TextStyle(fontSize: 16.0)),
                       const Spacer(),
                       TextButton(
                         onPressed: () => _selectTime(context, false),
@@ -192,7 +190,7 @@ class _AddReminderModalState extends State<AddReminderModal> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: const Text('Cancel'),
+                child: const Text('Hủy'),
               ),
               const SizedBox(width: 8.0),
               ElevatedButton(
@@ -212,7 +210,7 @@ class _AddReminderModalState extends State<AddReminderModal> {
                   widget.onLongPress();
                   Navigator.pop(context);
                 },
-                child: const Text('Save'),
+                child: const Text('Lưu'),
               ),
             ],
           ),

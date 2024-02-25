@@ -28,7 +28,7 @@ class _ReportSymptomScreen extends State<ReportSymptomScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Full Body View'),
+        title: const Text('Chọn trên cơ thể'),
         automaticallyImplyLeading: false,
         actions: [
           TextButton(
@@ -38,7 +38,7 @@ class _ReportSymptomScreen extends State<ReportSymptomScreen> {
             child: Padding(
               padding: const EdgeInsets.only(right: 8),
               child: Text(
-                'Done',
+                'Xong',
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),
@@ -52,10 +52,10 @@ class _ReportSymptomScreen extends State<ReportSymptomScreen> {
           getBodyPartSymptom: widget.getBodyPartSymptom,
           onSelectionUpdated: (p) => setState(() => _bodyParts = p),
           labelData: const RotationStageLabelData(
-            front: 'Front',
-            left: 'Left',
-            right: 'Right',
-            back: 'Back',
+            front: 'Trước',
+            left: 'Trái',
+            right: 'Phải',
+            back: 'Sau',
           ),
         ),
       ),

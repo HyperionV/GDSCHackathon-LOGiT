@@ -54,6 +54,6 @@ Future<MedicalRecordData> fetchMedicalRecordData(String medicalRecordId) async {
     // diagnosisList,
     // reportList);
   } else {
-    throw Exception('Medical record not found');
+    throw Exception('Không tìm thấy hồ sơ bệnh án');
   }
 }
