@@ -133,20 +133,51 @@ class _CreateReportState extends State<CreateReport> {
     widget.updateSuper();
   }
 
-  String bodyPartFormat(String input) {
-    String result = '';
+  String bodyPartFormat(String input, bool isVNmese) {
+    if (isVNmese) {
+      final Map<String, String> bodyPartsVN = {
+        'head': 'Đầu',
+        'neck': 'Cổ',
+        'leftShoulder': 'Vai trái',
+        'leftUpperArm': 'Cánh tay trái',
+        'leftElbow': 'Khuỷu tay trái',
+        'leftLowerArm': 'Cẳng tay trái',
+        'leftHand': 'Bàn tay trái',
+        'rightShoulder': 'Vai phải',
+        'rightUpperArm': 'Cánh tay phải',
+        'rightElbow': 'Khuỷu tay phải',
+        'rightLowerArm': 'Cẳng tay phải',
+        'rightHand': 'Bàn tay phải',
+        'upperBody': 'Thân trên',
+        'lowerBody': 'Thân dưới',
+        'leftUpperLeg': 'Đùi trái',
+        'leftKnee': 'Đầu gối trái',
+        'leftLowerLeg': 'Cẳng chân trái',
+        'leftFoot': 'Bàn chân trái',
+        'rightUpperLeg': 'Đùi phải',
+        'rightKnee': 'Đầu gối phải',
+        'rightLowerLeg': 'Cẳng chân phải',
+        'rightFoot': 'Bàn chân phải',
+        'abdomen': 'Bụng',
+        'vestibular': 'Hệ thống tiền đình',
+      };
 
-    result += input[0].toUpperCase();
+      return bodyPartsVN[input]!;
+    } else {
+      String result = '';
 
-    for (int i = 1; i < input.length; i++) {
-      if (input[i].toUpperCase() == input[i]) {
-        result += ' ${input[i]}';
-      } else {
-        result += input[i];
+      result += input[0].toUpperCase();
+
+      for (int i = 1; i < input.length; i++) {
+        if (input[i].toUpperCase() == input[i]) {
+          result += ' ${input[i]}';
+        } else {
+          result += input[i];
+        }
       }
-    }
 
-    return result;
+      return result;
+    }
   }
 
   @override
@@ -311,8 +342,10 @@ class _CreateReportState extends State<CreateReport> {
 
               setState(() {
                 for (String key in symptomNote.keys) {
-                  _contentController.text +=
-                      bodyPartFormat(key) + ': ' + symptomNote[key]! + '\n';
+                  _contentController.text += bodyPartFormat(key, true) +
+                      ': ' +
+                      symptomNote[key]! +
+                      '\n';
                 }
                 symptomNote.clear();
               });
